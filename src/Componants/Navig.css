@@ -1,0 +1,81 @@
+.navigDiv{
+    background: url(https://d2s7hpbx4rtiif.cloudfront.net/wysiwyg/bg-gift.png) no-repeat;
+    background-color: var(--homePg);
+    background-size: cover;
+    height: 30vh;
+    padding: 5vh 5vw 0 5vw;
+}
+.navigationBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0.7vw 2vw;
+    background-color: var(--homepgDiv);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.logo{
+    margin-left: 3rem;
+}
+.logo img{
+    width: 8.5vw;
+}
+.navContent{
+    margin-left: auto;
+    margin-top: 4vh;
+    list-style: none;
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4vw;
+}
+.navContent>a{
+    color: var(--navLinks);
+}
+.navContent li:hover{
+    cursor: pointer;
+}
+.logInBtn{
+    padding: 0.5vw 2vw;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: crimson;
+    font-weight: 800;
+    font-size: 1.4vw;
+    cursor: pointer;
+    outline: none;
+}
+.logInBtn:hover, .shopnowBtn:hover{
+    background-color: rgb(250, 161, 179);
+    color: crimson;
+    border: 1px solid;
+
+}
+.active{
+    color: crimson !important;
+    border-bottom: 1px solid crimson ; 
+}
+
+.signUpform{
+    border: none;
+    outline: none;
+    padding: 1vw;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+} 
+#username, #logoutBtn{
+    display: none;
+} 
+.back-to-top-btn{
+    position: fixed;
+    z-index: 99;
+    bottom: 1%;
+    right: 1%;
+    background-color: var(--theme);
+    padding: 1vw;
+    border-radius: 50%;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

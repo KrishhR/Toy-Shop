@@ -1,0 +1,52 @@
+.wishListDiv{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5vh;
+    background: url(https://d2s7hpbx4rtiif.cloudfront.net/wysiwyg/bg-gift.png);
+    background-color: var(--homePg);
+}
+.productCard-wishlist{
+    background-color: #f3eec5;
+    color: black;
+    width: 20%;
+    margin: auto;
+    margin-top: 5vh;
+    height: 57vh;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: var(--cardBoxShadow);
+    animation: fadeIn 1s;
+}
+.errorPage{
+    background: url(https://res.cloudinary.com/interflora/raw/upload/assets/svg-icons/empty-wishlist.svg) center no-repeat;
+    height: 80vh;
+    width: 100%;
+    background-size: 35vw;
+}
+.errorGoBackBtn{
+    border: none;
+    outline: none;
+    padding: 1vw 2vw;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: tomato;
+    color: white;
+    position: absolute;
+    top: 87%;
+    left: 44%;
+    cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+    .errorPage{
+        background-size: 60vw;
+    }
+    .errorGoBackBtn{
+        padding: 2vw;
+        left:34%;
+    }
+    .productCard-wishlist{
+        width: 70%;
+    }
+}
+
+

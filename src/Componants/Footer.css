@@ -1,0 +1,90 @@
+.footer{
+    width: 100%;
+    background: url(https://d2s7hpbx4rtiif.cloudfront.net/wysiwyg/bg-gift.png) ;
+    background-color: #294668;
+    background-size: cover;
+    color: white;
+    padding: 2vw;
+    line-height: 5vh;
+    font-family: 'Grandstander', cursive;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    margin-top: 8vh;
+}
+.heading{
+    font-family: 'Grandstander', cursive;
+    padding: 0 30vw;
+    line-height: 5vw;
+    text-align: center;
+}
+.footer-content{
+    padding: 0 16vw;
+    font-size: 1.5vw;
+    margin-top: 6vh;
+    text-align: center;
+}
+.content-head{
+    font-size: 3vw;
+    margin-top: 7vw;
+    padding-top: 5vh;
+    border-top: 1px solid;
+}
+.socialMediaLink{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid;
+}
+.socialMediaLink>span{
+    border-radius: 50%;
+    padding: 0.7vw 0.6vw 0;
+    background-color: var(--homepgDiv);
+    cursor: pointer;
+}
+.socialMediaLink>span:hover{
+    background-color: #93d3eb;
+}
+.footerItemLists{
+    margin-top: 8vh;
+    padding: 0 16vw;
+
+}
+.footerLists{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    
+}
+ul{
+    list-style: none;
+    font-size: medium;
+    line-height: 3.5vh;
+    padding-bottom: 5vh;
+}
+.finalFooter{
+    padding: 5vw 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+.finalFooter span:hover,
+li:hover{
+    color: #93d3eb;
+    cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+    .heading{
+        font-size: 6vw;
+        line-height: 6vh;
+    }
+    .footer-content{
+        font-size: 4vw;
+    }
+}
