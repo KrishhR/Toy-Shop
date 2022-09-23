@@ -28,6 +28,11 @@ const Wishlist = () => {
         } else {
           item.wish = false;
           pro.setWishList(--pro.wishList);
+          setSnack({
+            open: true,
+            html: "Product removed from your wishlist",
+            severity:'error'
+          })
         }
       }
     });
