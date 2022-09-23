@@ -1,0 +1,22 @@
+.checkout {
+    background: url(https://d2s7hpbx4rtiif.cloudfront.net/wysiwyg/bg-gift.png);
+    background-color: var(--homePg);
+    background-size: 20vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .checkMsg {
+    padding-top: 10vh;
+    width: 99vw;
+    margin: auto;
+    text-align: center;
+    font-size: 2vw;
+  }
+  #landingBtn {
+      padding: 0.7vw;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+  

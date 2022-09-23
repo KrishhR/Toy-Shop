@@ -33,25 +33,38 @@ const Wishlist = () => {
     });
   };
 
+  // Function to move the item into the cart
   const moveToCart = (e) => {
     let product =  e.target.closest('.productCard-wishlist').id;
-    let i;
+    
     products.find((item)=> {
-      if(item.id === +product){
+      if(item.id == +product){
         item.wish = false;
         pro.setWishList(--pro.wishList);
 
-        pro.cart.forEach((val, i)=> {
-          if(val.id == +product){
-            val.cart +=1;
-            console.log('dfkdswh');
-          }
-          else{
-            item.cart += 1;
-            pro.setCartQuan(++pro.cartQuan);
-            pro.setCart([...pro.cart, item]);
-          }
-        })
+        if(pro.cart.length !== 0) {
+          pro.cart.forEach((val, i)=> {
+            if(val.id == +product){
+              val.cart +=1;
+              pro.setCartQuan(++pro.cartQuan);
+            }
+            
+          })
+        }else{
+          item.cart += 1;
+          item.discountedPrice = (
+            item.price -
+            (item.discount * item.price) / 100
+          ).toFixed(2);
+          item.totalPrice = +item.discountedPrice * +item.cart;
+          pro.setCartQuan(++pro.cartQuan);
+          pro.setCart([...pro.cart, item]);
+        }
+        
+        
+            
+            
+          
         setSnack({
           open: true,
           html: "Product added to cart",

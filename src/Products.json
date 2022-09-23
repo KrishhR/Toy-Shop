@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "name": "Bubble Blaster With Fuel Impulse",
+      "name": "Bubble Blaster",
       "img": "https://hamleysgumlet.gumlet.io/product/492407841/300/492407841-1.JPG",
       "price": 1999,
       "discount": 7,
@@ -98,7 +98,7 @@
       "discount": 17,
       "discountedPrice":0,
       "totalPrice":0,
-      "category": "Sports&Outdoor",
+      "category": "Outdoor",
       "cart": 0,
       "wish": false,
       "rate": 5
@@ -111,7 +111,7 @@
       "discount": 18,
       "discountedPrice":0,
       "totalPrice":0,
-      "category": "Sports&Outdoor",
+      "category": "Outdoor",
       "cart": 0,
       "wish": false,
       "rate": 5
@@ -124,7 +124,7 @@
       "discount": 12,
       "discountedPrice":0,
       "totalPrice":0,
-      "category": "Sports&Outdoor",
+      "category": "Outdoor",
       "cart": 0,
       "wish": false,
       "rate": 4
@@ -137,7 +137,7 @@
       "discount": 10,
       "discountedPrice":0,
       "totalPrice":0,
-      "category": "Sports&Outdoor",
+      "category": "Outdoor",
       "cart": 0,
       "wish": false,
       "rate": 1
@@ -235,7 +235,7 @@
     },
     {
       "id": 19,
-      "name": "I Dance Unicorn Light Speaker",
+      "name": "Unicorn Light Speaker",
       "img": "https://hamleysgumlet.gumlet.io/product/491602645/300/491602645-1.webp",
       "price": 3300.5,
       "discount": 13,
@@ -358,7 +358,7 @@
       "discount": 20,
       "discountedPrice":0,
       "totalPrice":0,
-      "category": "SoftToys",
+      "category": "Outdoor",
       "cart": 0,
       "wish": false,
       "rate": 5
@@ -404,19 +404,6 @@
     },
     {
       "id": 32,
-      "name": "Cookies French Heart (500 g)",
-      "img": "https://cdn.urbanpiper.com/media/bizmedia/2022/07/06/French_Heart_1.jpg?width=300",
-      "price": 350.6,
-      "discount": 14,
-      "discountedPrice":0,
-      "totalPrice":0,
-      "category": "SoftToys",
-      "cart": 0,
-      "wish": false,
-      "rate": 5
-    },
-    {
-      "id": 33,
       "name": "Masha and the Bear Plush",
       "img": "https://hamleysgumlet.gumlet.io/product/492910449/300/492910449-1_3366.webp",
       "price": 1200.6,
@@ -429,7 +416,7 @@
       "rate": 5
     },
     {
-      "id": 34,
+      "id": 33,
       "name": "Barbie Fashionistas doll",
       "img": "https://hamleysgumlet.gumlet.io/product/491567599/300/491567599.jpg",
       "price": 800.0,
@@ -442,8 +429,8 @@
       "rate": 5
     },
     {
-      "id": 35,
-      "name": "Hilife Pretend Play Fun Doll-house",
+      "id": 34,
+      "name": "Doll-house",
       "img": "https://hamleysgumlet.gumlet.io/product/492407501/300/492407501-1.webp",
       "price": 12500.5,
       "discount": 8,
@@ -455,7 +442,7 @@
       "rate": 5
     },
     {
-      "id": 36,
+      "id": 35,
       "name": "Karmax 46 Pieces Set",
       "img": "https://hamleysgumlet.gumlet.io/product/491567645/300/491567645-1.jpg",
       "price": 3500.6,
@@ -468,7 +455,7 @@
       "rate": 5
     },
     {
-      "id": 37,
+      "id": 36,
       "name": "Hasbro Jenga Tube",
       "img": "https://hamleysgumlet.gumlet.io/product/491668391/300/491668391-1_1623.webp",
       "price": 1000.00,
@@ -481,8 +468,8 @@
       "rate": 5
     },
     {
-      "id": 38,
-      "name": "Youreka 101 Family Games",
+      "id": 37,
+      "name": "Family Games",
       "img": "https://hamleysgumlet.gumlet.io/product/491947774/300/491947774-1.jpg",
       "price": 3705.00,
       "discount": 10,
@@ -493,7 +480,7 @@
       "wish": false,
       "rate": 5
     },{
-      "id": 39,
+      "id": 38,
       "name": "Mattel Uno Card Game",
       "img": "https://hamleysgumlet.gumlet.io/product/490160800/300/490160800-1.jpg",
       "price": 250.00,
@@ -505,7 +492,7 @@
       "wish": false,
       "rate": 5
     },{
-      "id": 40,
+      "id": 39,
       "name": "Gaming Connect 4 Shots",
       "img": "https://hamleysgumlet.gumlet.io/product/491668389/300/491668389-1_6071.webp",
       "price": 2000.20,
@@ -513,6 +500,18 @@
       "discountedPrice":0,
       "totalPrice":0,
       "category": "Indoor",
+      "cart": 0,
+      "wish": false,
+      "rate": 5
+    },{
+      "id": 40,
+      "name": "Elephant Soft Toy",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFOjrN0YHYvu7DKV05OqGckCyRgYhTih3V4w&usqp=CAU",
+      "price": 2000.20,
+      "discount": 10,
+      "discountedPrice":0,
+      "totalPrice":0,
+      "category": "SoftToys",
       "cart": 0,
       "wish": false,
       "rate": 5

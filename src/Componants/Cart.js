@@ -89,7 +89,7 @@ const Cart = () => {
         </div>
         <div className="cartCon">
           <div className="cartDiv" style={{width: user.cartQuan<1? "100%":"75%" }}>
-            {user.cartQuan < 1 ? (
+            {user.cart.length < 1 ? (
               <>
                 <div className="errorCartPage">
                   <Link to="/toys">
@@ -122,9 +122,9 @@ const Cart = () => {
                         <h3>{item.name}</h3>
 
                         <span>
-                          <h2>Rs. {(item.totalPrice).toFixed(2)}</h2>
+                          <h2>Rs. {(item.totalPrice * item.cart).toFixed(2)}</h2>
                           <s>
-                            <h4>Rs. {(item.price).toFixed(2)}</h4>
+                            <h4>Rs. {(item.price * item.cart).toFixed(2)}</h4>
                           </s>
                         </span>
                       </span>
@@ -161,8 +161,8 @@ const Cart = () => {
               })
             )}
           </div>
-          <div className="billDiv" style={{display: user.cartQuan<1?"none":'block'}}>
-            <h2>PRICE DETAILS ({user.cartQuan} {user.cartQuan<2?"item":"items"}):</h2>
+          <div className="billDiv" style={{display: user.cart.length<1?"none":'block'}}>
+            <h2>PRICE DETAILS ({user.cart.length} {user.cart.length<2?"item":"items"}):</h2>
 
             <div style={{ borderBottom: "1px solid" }}>
               <p>

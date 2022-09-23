@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from "react";
 import "./Toys.css";
 import products from "../Products.json";
 import StarIcon from "@mui/icons-material/Star";
@@ -26,7 +26,6 @@ const Toys = () => {
     category: "all",
   });
 
-
   // <------working of filters------>
   useEffect(() => {
     setProData([
@@ -42,7 +41,7 @@ const Toys = () => {
         })
         .sort((a, b) => {
           return filters.price !== ""
-            ? filters.price === "low-to-high"
+            ? filters.price === "all"
               ? a.price - b.price
               : b.price - a.price
             : "";
@@ -61,14 +60,12 @@ const Toys = () => {
   // <------Price Filter------->
   const priceFilter = (e) => {
     let fil = e.target.value;
-    console.log(fil);
     setFilters({ ...filters, price: fil });
   };
 
   // <------Category Filter------->
   const category = (e) => {
-    if (e.target.tagName !== "BUTTON") return;
-    let cat = e.target.previousSibling.value; 
+    let cat = e.target.value;
     setFilters({ ...filters, category: cat });
   };
 
@@ -104,13 +101,16 @@ const Toys = () => {
     });
   };
 
-   // <-------Function to add products to cart------->
+  // <-------Function to add products to cart------->
   const addCart = (e) => {
     let click = e.target.closest(".productCard").id;
     products.forEach((item) => {
       if (item.id == click) {
         item.cart += 1;
-        item.discountedPrice = ((item.price - (item.discount * item.price) / 100).toFixed(2));
+        item.discountedPrice = (
+          item.price -
+          (item.discount * item.price) / 100
+        ).toFixed(2);
         item.totalPrice = +item.discountedPrice * +item.cart;
         pro.setCartQuan(++pro.cartQuan);
         pro.setCart([...pro.cart, item]);
@@ -123,7 +123,7 @@ const Toys = () => {
     });
   };
 
-   // <-------Function to remove products from cart------->
+  // <-------Function to remove products from cart------->
   const removeCart = (e) => {
     let click = e.target.closest(".productCard").id;
     let i;
@@ -142,7 +142,6 @@ const Toys = () => {
       severity: "error",
     });
   };
-
 
   // <-------Function to increase the quantity of the product------->
   const increment = (e) => {
@@ -170,14 +169,23 @@ const Toys = () => {
   return (
     <>
       <div className="store-container">
-
         {/* <--------Filters Division---------> */}
         <div className="filters">
-
           {/* Category Filter */}
           <h3 style={{ textAlign: "center" }}>Filters</h3>
+          <div className="filtersDiv" onChange={category}>
+            <select className="priceFilter" defaultValue={-1}>
+              <option value={"all"}>All Products</option>
+              <option value={"Games"}>Games</option>
+              <option value="Outdoor">Outdoor</option>
+              <option value="RideOns">RideOns</option>
+              <option value="Action">Action</option>
+              <option value="SoftToys">SoftToys</option>
+              <option value="Indoor">Indoor</option>
+            </select>
+          </div>
 
-          <div onClick={category}>
+          {/* <div >
             <input
               type="radio"
               name="category"
@@ -206,8 +214,7 @@ const Toys = () => {
               className="radioBtn"
             />
             <button className="all">Baked</button>
-          </div>
-
+          </div> */}
 
           {/* Price Filter */}
           <div className="filtersDiv" onChange={priceFilter}>
@@ -228,10 +235,8 @@ const Toys = () => {
           </div>
         </div>
 
-
         {/* <-----------_PRODUCT SECTION------------> */}
         <div className="products-section">
-
           {/* Search Bar */}
           <div className="searchDiv">
             <input
@@ -247,12 +252,10 @@ const Toys = () => {
             />
           </div>
 
-
           {/* products section */}
           <div className="products">
             {proData.slice(limits.lower, limits.upper).map((val) => {
               return (
-
                 // Product Card
                 <div
                   className="productCard"
@@ -300,7 +303,14 @@ const Toys = () => {
                           ).toFixed(2)}{" "}
                           <s>{val.price.toFixed(2)}</s>
                         </p>
-                        <p className="categoryDiv">{val.category}</p>
+                        <p
+                          className="categoryDiv"
+                          style={{
+                            display: val.category !== "" ? "block" : "none",
+                          }}
+                        >
+                          {val.category}
+                        </p>
                       </div>
 
                       <div className="Prod-btnSet">
@@ -308,7 +318,7 @@ const Toys = () => {
                           <div className="counter">
                             <button
                               style={{
-                                padding: "0.2vw 0.7vw",
+                                padding: "0.1vw 0.7vw",
                                 marginRight: "0.3em",
                                 fontSize: "1.7vw",
                                 fontWeight: "800",
@@ -320,7 +330,7 @@ const Toys = () => {
                             <span>{val.cart}</span>
                             <button
                               style={{
-                                padding: "0.2vw 0.7vw",
+                                padding: "0.1vw 0.7vw",
                                 marginLeft: "0.3em",
                                 fontSize: "1.7vw",
                                 fontWeight: "800",
@@ -384,7 +394,7 @@ const Toys = () => {
         </Alert>
       </Snackbar>
     </>
-  )
-}
+  );
+};
 
-export default Toys
+export default Toys;

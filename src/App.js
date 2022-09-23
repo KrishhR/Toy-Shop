@@ -9,6 +9,7 @@ import Cart from "./Componants/Cart";
 import Footer from "./Componants/Footer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import Checkout from "./Componants/Checkout";
 
 export const Context = createContext();
 
@@ -42,6 +43,7 @@ function App() {
               <Route path="/toys" element={<Toys />} />
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
             </Route>
           </Routes>
         </Context.Provider>

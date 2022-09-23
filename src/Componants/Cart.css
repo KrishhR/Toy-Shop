@@ -1,10 +1,11 @@
 /* IF CART IS EMPTY THEN ERROR CART PAGE WILL DISPLAY */
 .errorCartPage {
-    background: url(https://d2s7hpbx4rtiif.cloudfront.net/wysiwyg/bg-gift.png);
+    background: url(https://marigold.ie/images/empty-cart.png) no-repeat;
     background-color: var(--homePageBg);
     height: 70vh;
     width: 100%;
-    background-size: 50vw;
+    background-size: 25vw;
+    background-position: center;
     position: relative;
   }
   .errorGoBackBtnCart {
